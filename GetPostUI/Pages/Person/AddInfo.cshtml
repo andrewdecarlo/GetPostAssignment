@@ -1,0 +1,34 @@
+﻿@page
+@model GetPostUI.Pages.Person.AddInfoModel
+@{
+    ViewData["Title"] = "Add Info";
+}
+
+<h1>Add Person Info</h1>
+
+<div>
+    <h3>POST with re-direct to index</h3>
+    <form method="post">
+        <label asp-for= "CurrentPerson.Name"></label>
+        <input type="text" asp-for="CurrentPerson.Name" placeholder="Name"/>
+        <label asp-for="CurrentPerson.Hometown"></label>
+        <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Hometown"/>
+        <input type="submit" />
+    </form>
+    <h3>POST directly to index</h3>
+    <form method="post" asp-page="Index">
+        <label asp-for="CurrentPerson.Name"></label>
+        <input type="text" asp-for="CurrentPerson.Name" placeholder="Name" />
+        <label asp-for="CurrentPerson.Hometown"></label>
+        <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Hometown" />
+        <input type="submit" />
+    </form>
+    <h3>GET to index</h3>
+    <form method="get" asp-page="Index">
+        <label asp-for="CurrentPerson.Name"></label>
+        <input type="text" asp-for="CurrentPerson.Name" placeholder="Name" />
+        <label asp-for="CurrentPerson.Hometown"></label>
+        <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Hometown" />
+        <input type="submit" />
+    </form>
+</div>
