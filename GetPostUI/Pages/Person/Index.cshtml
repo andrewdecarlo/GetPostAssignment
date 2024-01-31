@@ -7,6 +7,7 @@
 
 <h1>Person Index</h1>
 
+<!--Check if name property is set; display if so-->
 @if (!String.IsNullOrEmpty(Model.CurrentPerson.Name))
 {
     <h2>Welcome @Model.CurrentPerson.Name</h2>

@@ -13,8 +13,10 @@ namespace GetPostUI.Pages.Person
             _logger = logger;
         }
 
+        //Make person info properties available for GET
         [BindProperty(SupportsGet = true)]
         public PersonInfo CurrentPerson { get; set; } = new PersonInfo();
+
         public void OnGet()
         {
             _logger.LogInformation("Person Index OnGet()");

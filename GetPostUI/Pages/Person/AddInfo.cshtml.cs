@@ -13,6 +13,7 @@ namespace GetPostUI.Pages.Person
             _logger = logger;
         }
 
+        //Make person info properties available for GET
         [BindProperty(SupportsGet = true)]
         public PersonInfo CurrentPerson { get; set; } = new PersonInfo();
         public void OnGet()
@@ -24,11 +25,13 @@ namespace GetPostUI.Pages.Person
         {
             _logger.LogInformation("Person AddInfo OnPost()");
 
+            //Check model state and redirect to index page if state is valid
             if (ModelState.IsValid)
             {
                 return RedirectToPage("Index", CurrentPerson);
             }
 
+            //Return to same page otherwise
             return Page();
         }
     }

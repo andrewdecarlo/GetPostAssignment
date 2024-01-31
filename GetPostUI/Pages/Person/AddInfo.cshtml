@@ -15,6 +15,7 @@
         <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Hometown"/>
         <input type="submit" />
     </form>
+
     <h3>POST directly to index</h3>
     <form method="post" asp-page="Index">
         <label asp-for="CurrentPerson.Name"></label>
@@ -23,6 +24,7 @@
         <input type="text" asp-for="CurrentPerson.Hometown" placeholder="Hometown" />
         <input type="submit" />
     </form>
+
     <h3>GET to index</h3>
     <form method="get" asp-page="Index">
         <label asp-for="CurrentPerson.Name"></label>
